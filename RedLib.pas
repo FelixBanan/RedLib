@@ -102,16 +102,16 @@ var
   QRED: integer;
 
 begin
-  wrcl('*************************************', 10);
-  wrcl('Red Library version 1.1.0', 10);
-  wrcl('Lib for simplify coding', 10);
-  wrcl('by FelixBanan', 10);
-  wrcl('*************************************', 10);
-  wrc('Loading Red Library', 10);
+  wrcl('*************************************', 12);
+  wrcl('Red Library version 1.1.0 (test branch)', 12);
+  wrcl('Lib for simplify coding', 12);
+  wrcl('by FelixBanan', 12);
+  wrcl('*************************************', 12);
+  wrc('Loading Red Library', 12);
   while QRED <> 3 do
   begin
     QRED := QRED + 1;
-    dly(200);
+    dly(400);
     wrc('.', 10);
   end;
   ccon;
