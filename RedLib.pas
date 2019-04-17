@@ -112,7 +112,7 @@ begin
   begin
     QRED := QRED + 1;
     dly(400);
-    wrc('.', 10);
+    wrc('.', 12);
   end;
   ccon;
 end;
