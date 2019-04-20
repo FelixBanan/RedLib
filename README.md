@@ -1,9 +1,9 @@
 # RedLib
 ![Alt-текст](https://img.shields.io/badge/RedLib-1.1.0-orange.svg)
-![Alt-текст](https://img.shields.io/badge/build-stable-brightgreen.svg) <br>
+![Alt-текст](https://img.shields.io/badge/build-stable%20alpha-brightgreen.svg) <br>
 Библиотека для упрощения программирования на PascalABC.net
 
-| Функция | Описание | Пример|
+| Процедуры | Описание | Пример|
 |:----:|:----:|:----------|
 | wr | write, только укороченный | wr(1+'hello world'); |
 | wrl | writeln, только укороченный | wrl(1+'hello world'); |
