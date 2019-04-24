@@ -27,14 +27,14 @@ procedure wr(text: object);
 procedure wrl(text: object);
 
 ///Ставит цвет всему окну и тексту
-procedure WinCol(back: integer; text: integer := 15);
+procedure wincol(back: integer; text: integer := 15);
 
 ///Очищает экран
-procedure CCon;
+procedure ccon;
 ///Цвет текста
-procedure ConCol(c: integer);
+procedure concol(c: integer);
 ///Цвет фона
-procedure BackCol(c: integer);
+procedure backcol(c: integer);
 ///Задержка
 procedure dly(ms: integer);
 
