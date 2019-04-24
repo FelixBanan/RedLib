@@ -1,7 +1,6 @@
 unit RedLib;
 
 (*
- test branch
  Version 1.3.0 Alpha
  github.com/FelixBanan/Pascal/Lib/RedLib
 *)
@@ -320,17 +319,17 @@ var
   QRED: integer;
 
 begin
-  wrcl('*************************************', 12);
-  wrcl('Red Library version 1.3.0 (test branch)', 12);
-  wrcl('Lib for simplify coding', 12);
-  wrcl('by FelixBanan', 12);
-  wrcl('*************************************', 12);
-  wrc('Loading Red Library', 12);
+  wrcl('*************************************', 10);
+  wrcl('Red Library version 1.3.0', 10);
+  wrcl('Lib for simplify coding', 10);
+  wrcl('by FelixBanan', 10);
+  wrcl('*************************************', 10);
+  wrc('Loading Red Library', 10);
   while QRED <> 3 do
   begin
     QRED := QRED + 1;
-    dly(400);
-    wrc('.', 12);
+    dly(200);
+    wrc('.', 10);
   end;
   ccon;
 end;
