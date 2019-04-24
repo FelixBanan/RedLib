@@ -39,119 +39,225 @@ procedure BackCol(c: integer);
 ///Задержка
 procedure dly(ms: integer);
 
-/// Укороченный read
-procedure rd(var x: integer);
-procedure rd(var x: shortint);
-procedure rd(var x: smallint);
-procedure rd(var x: int64);
-procedure rd(var x: byte);
-procedure rd(var x: word);
-procedure rd(var x: longword);
-procedure rd(var x: uint64);
-procedure rd(var x: real);
-procedure rd(var x: single);
+///Укороченный read
+///Вторым параметром можно задать цвет, если не зададите, то текст будет белым
+procedure rd(var x: integer; color: integer := 15);
+procedure rd(var x: shortint; color: integer := 15);
+procedure rd(var x: smallint; color: integer := 15);
+procedure rd(var x: int64; color: integer := 15);
+procedure rd(var x: byte; color: integer := 15);
+procedure rd(var x: word; color: integer := 15);
+procedure rd(var x: longword; color: integer := 15);
+procedure rd(var x: uint64; color: integer := 15);
+procedure rd(var x: real; color: integer := 15);
+procedure rd(var x: single; color: integer := 15);
+procedure rd(var x: string; color: integer := 15);
+procedure rd(var x: char; color: integer := 15);
+procedure rd(var x: boolean; color: integer := 15);
 
-/// Укороченный readln
-procedure rdl(var x: integer);
-procedure rdl(var x: shortint);
-procedure rdl(var x: smallint);
-procedure rdl(var x: int64);
-procedure rdl(var x: byte);
-procedure rdl(var x: word);
-procedure rdl(var x: longword);
-procedure rdl(var x: uint64);
-procedure rdl(var x: real);
-procedure rdl(var x: single);
+///Укороченный readln
+///Вторым параметром можно задать цвет, если не зададите, то текст будет белым
+procedure rdl(var x: integer; color: integer := 15);
+procedure rdl(var x: shortint; color: integer := 15);
+procedure rdl(var x: smallint; color: integer := 15);
+procedure rdl(var x: int64; color: integer := 15);
+procedure rdl(var x: byte; color: integer := 15);
+procedure rdl(var x: word; color: integer := 15);
+procedure rdl(var x: longword; color: integer := 15);
+procedure rdl(var x: uint64; color: integer := 15);
+procedure rdl(var x: real; color: integer := 15);
+procedure rdl(var x: single; color: integer := 15);
+procedure rdl(var x: string; color: integer := 15);
+procedure rdl(var x: char; color: integer := 15);
+procedure rdl(var x: boolean; color: integer := 15);
 
 implementation
 
-procedure rd(var x: integer);
+procedure rd(var x: integer; color: integer);
 begin
+  concol(color);
   read(x);
+  concol(15);
 end;
 
-procedure rd(var x: shortint);
+procedure rd(var x: shortint; color: integer);
 begin
+  concol(color);
   read(x);
+  concol(15);
 end;
 
-procedure rd(var x: smallint);
+procedure rd(var x: smallint; color: integer);
 begin
+  concol(color);
   read(x);
+  concol(15);
 end;
 
-procedure rd(var x: int64);
+procedure rd(var x: int64; color: integer);
 begin
+  concol(color);
   read(x);
-end;
-procedure rd(var x: byte);
-begin
-  read(x);
-end;
-procedure rd(var x: word);
-begin
-  read(x);
-end;
-procedure rd(var x: longword);
-begin
-  read(x);
-end;
-procedure rd(var x: uint64);
-begin
-  read(x);
-end;
-procedure rd(var x: real);
-begin
-  read(x);
-end;
-procedure rd(var x: single);
-begin
-  read(x);
+  concol(15);
 end;
 
-procedure rdl(var x: integer);
+procedure rd(var x: byte; color: integer);
 begin
+  concol(color);
   read(x);
+  concol(15);
 end;
 
-procedure rdl(var x: shortint);
+procedure rd(var x: word; color: integer);
 begin
+  concol(color);
   read(x);
+  concol(15);
 end;
 
-procedure rdl(var x: smallint);
+procedure rd(var x: longword; color: integer);
 begin
+  concol(color);
   read(x);
+  concol(15);
 end;
 
-procedure rdl(var x: int64);
+procedure rd(var x: uint64; color: integer);
 begin
+  concol(color);
   read(x);
+  concol(15);
 end;
-procedure rdl(var x: byte);
+
+procedure rd(var x: real; color: integer);
 begin
+  concol(color);
   read(x);
+  concol(15);
 end;
-procedure rdl(var x: word);
+
+procedure rd(var x: single; color: integer);
 begin
+  concol(color);
   read(x);
+  concol(15);
 end;
-procedure rdl(var x: longword);
+
+procedure rd(var x: string; color: integer);
 begin
+  concol(color);
   read(x);
+  concol(15);
 end;
-procedure rdl(var x: uint64);
+
+procedure rd(var x: char; color: integer);
 begin
+  concol(color);
   read(x);
+  concol(15);
 end;
-procedure rdl(var x: real);
+
+procedure rd(var x: boolean; color: integer);
 begin
+  concol(color);
   read(x);
+  concol(15);
 end;
-procedure rdl(var x: single);
+
+// rdl
+
+procedure rdl(var x: integer; color: integer);
 begin
-  read(x);
+  concol(color);
+  readln(x);
+  concol(15);
 end;
+
+procedure rdl(var x: shortint; color: integer);
+begin
+  concol(color);
+  readln(x);
+  concol(15);
+end;
+
+procedure rdl(var x: smallint; color: integer);
+begin
+  concol(color);
+  readln(x);
+  concol(15);
+end;
+
+procedure rdl(var x: int64; color: integer);
+begin
+  concol(color);
+  readln(x);
+  concol(15);
+end;
+
+procedure rdl(var x: byte; color: integer);
+begin
+  concol(color);
+  readln(x);
+  concol(15);
+end;
+
+procedure rdl(var x: word; color: integer);
+begin
+  concol(color);
+  readln(x);
+  concol(15);
+end;
+
+procedure rdl(var x: longword; color: integer);
+begin
+  concol(color);
+  readln(x);
+  concol(15);
+end;
+
+procedure rdl(var x: uint64; color: integer);
+begin
+  concol(color);
+  readln(x);
+  concol(15);
+end;
+
+procedure rdl(var x: real; color: integer);
+begin
+  concol(color);
+  readln(x);
+  concol(15);
+end;
+
+procedure rdl(var x: single; color: integer);
+begin
+  concol(color);
+  readln(x);
+  concol(15);
+end;
+
+procedure rdl(var x: string; color: integer);
+begin
+  concol(color);
+  readln(x);
+  concol(15);
+end;
+
+procedure rdl(var x: char; color: integer);
+begin
+  concol(color);
+  readln(x);
+  concol(15);
+end;
+
+procedure rdl(var x: boolean; color: integer);
+begin
+  concol(color);
+  readln(x);
+  concol(15);
+end;
+
+(***************************************************************************************)
 
 procedure wr(text: object);
 begin
