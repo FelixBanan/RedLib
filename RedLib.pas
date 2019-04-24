@@ -39,7 +39,14 @@ procedure BackCol(c: integer);
 ///Задержка
 procedure dly(ms: integer);
 
+procedure rd(var x: integer);
+
 implementation
+
+procedure rd(var x: integer);
+begin
+  read(x);
+end;
 
 procedure wr(text: object);
 begin
