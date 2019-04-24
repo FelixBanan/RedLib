@@ -1,6 +1,6 @@
 # RedLib
-![Alt-текст](https://img.shields.io/badge/RedLib-1.3.0-red.svg)
-![Alt-текст](https://img.shields.io/badge/build-experimental-critical.svg) <br>
+![Alt-текст](https://img.shields.io/badge/RedLib-1.3.0-orange.svg)
+![Alt-текст](https://img.shields.io/badge/build-stable%20alpha-brightgreen.svg) <br>
 Библиотека для упрощения программирования на PascalABC.net
 
 | Процедуры | Описание | Пример|
@@ -9,6 +9,8 @@
 | wrl | writeln, только укороченный | wrl(1+'hello world'); |
 | wrc | write, только укороченный и с выбором цвета | wrc(1+'hello world', 12); |
 | wrcl | writeln, только укороченный и с выбором цвета | wrcl(1+'hello world', 12); |
+| rd | read, только укороченный и с выбором цвета | rd(x, 12); |
+| rdl | readln, только укороченный и с выбором цвета | rdl(x, 12); |
 | wincol | Ставит цвет всему окну и тексту (Первое значение - фон, второе текст) | wincol(2, 3); |
 | ccon | Очищает экран | ccon; |
 | dly | Задержка | dly(ms); |
@@ -20,4 +22,5 @@ ____
 
 - [X] Упростить write
 - [X] Упростить создание цветного текста
-- [ ] Упростить read
+- [X] Упростить read
+- [X] Добавить выбор цвета к read
