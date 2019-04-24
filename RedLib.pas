@@ -287,12 +287,12 @@ begin
   ConCol(white);
 end;
 
-procedure CCon;
+procedure ccon;
 begin
   clrscr;
 end;
 
-procedure WinCol(back: integer; text: integer);
+procedure wincol(back: integer; text: integer);
 begin
   Window(0, 0, 100, 100);
   textbackground(back);
@@ -300,12 +300,12 @@ begin
   ccon;
 end;
 
-procedure BackCol(c: integer);
+procedure backcol(c: integer);
 begin
   TextBackground(c);
 end;
 
-procedure ConCol(c: integer);
+procedure concol(c: integer);
 begin
   TextColor(c);
 end;
