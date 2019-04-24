@@ -17,7 +17,9 @@
 | concol | Цвет текста | concol(12); |
 | backcol | Цвет фона текста | concol(12); |
 ____
-
+## Таблица цветов
+![Alt-текст](http://mypascal.ru/images_files/1/57.png)
+____
 ### RoadMap
 
 - [X] Упростить write
