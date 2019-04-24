@@ -1,5 +1,5 @@
 # RedLib
-![Alt-текст](https://img.shields.io/badge/RedLib-1.1.0-red.svg)
+![Alt-текст](https://img.shields.io/badge/RedLib-1.3.0-red.svg)
 ![Alt-текст](https://img.shields.io/badge/build-experimental-critical.svg) <br>
 Библиотека для упрощения программирования на PascalABC.net
 
