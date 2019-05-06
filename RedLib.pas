@@ -332,10 +332,6 @@ procedure redload();
 var
   QRED: integer;
 
-procedure redload();
-var
-  QRED: integer;
-
 begin
   wrcl('    ____           ____    ______  ', 15);    
   wrcl('   / __ \___  ____/ / /   /  _/ /_ ', 15);      
