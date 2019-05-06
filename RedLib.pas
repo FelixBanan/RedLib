@@ -1,7 +1,7 @@
-unit RedLib;
+﻿unit RedLib;
 
 (*
- Version 1.3.0 Alpha
+ Version 1.4.0 Alpha
  github.com/FelixBanan/Pascal/Lib/RedLib
 *)
 
@@ -31,12 +31,16 @@ procedure wincol(back: integer; text: integer := 15);
 
 ///Очищает экран
 procedure ccon;
+///Очищает строку
+procedure ceol;
 ///Цвет текста
 procedure concol(c: integer);
 ///Цвет фона
 procedure backcol(c: integer);
 ///Задержка
 procedure dly(ms: integer);
+///Ожидание
+procedure wait;
 
 ///Укороченный read
 ///Вторым параметром можно задать цвет, если не зададите, то текст будет белым
@@ -291,6 +295,16 @@ begin
   clrscr;
 end;
 
+procedure ceol;
+begin
+  clearline;
+end;
+
+procedure wait;
+begin
+  read();
+end;
+
 procedure wincol(back: integer; text: integer);
 begin
   Window(0, 0, 100, 100);
@@ -318,20 +332,24 @@ procedure redload();
 var
   QRED: integer;
 
+procedure redload();
+var
+  QRED: integer;
+
 begin
-  wrcl('*************************************', 10);
-  wrcl('Red Library version 1.3.0', 10);
-  wrcl('Lib for simplify coding', 10);
-  wrcl('by FelixBanan', 10);
-  wrcl('*************************************', 10);
-  wrc('Loading Red Library', 10);
+  wrcl('    ____           ____    ______  ', 15);    
+  wrcl('   / __ \___  ____/ / /   /  _/ /_ ', 15);      
+  wrcl('  / /_/ / _ \/ __  / /    / // __ \', 15);   
+  wrcl(' / _  _/  __/ /_/ / /____/ // /_/ /', 15);  
+  wrcl('/_/ |_|\___/\__ _/_____/___/_ ___/ ', 15);
+  wrc('Loading Red Library v1.4.0', 15);
   while QRED <> 3 do
   begin
     QRED := QRED + 1;
-    dly(200);
-    wrc('.', 10);
+    dly(500);
+    wrc('.', 15);
   end;
-  ccon;
+  ceol;
 end;
 
 begin
