@@ -1,6 +1,6 @@
 # RedLib
-![Alt-текст](https://img.shields.io/badge/RedLib-1.4.0-brightgreen.svg)
-![Alt-текст](https://img.shields.io/badge/build-stable%20alpha-brightgreen.svg) <br>
+![Alt-текст](https://img.shields.io/badge/RedLib-1.5.0-brightgreen.svg)
+![Alt-текст](https://img.shields.io/badge/build-stable-brightgreen.svg) <br>
 Библиотека для упрощения программирования на PascalABC.net
 
 | Процедуры | Описание | Пример|
@@ -33,4 +33,6 @@ ____
 - [X] Добавить очистку строки
 - [X] Добавить ожидание
 - [X] ASCII TEXT ART
-- [ ] Указывать цвета буквами
+- [X] Указывать цвета буквами
+- [ ] Указывать цвета русскими буквами
+- [ ] Указывать цвета внезависимости от регистра

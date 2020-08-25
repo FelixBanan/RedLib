@@ -1,8 +1,8 @@
 ﻿unit RedLib;
 
 (*
- Version 1.4.0 Alpha
- github.com/FelixBanan/Pascal/Lib/RedLib
+ Version 1.5.0 Stable
+ github.com/FelixBanan/RedLib
 *)
 
 interface
@@ -13,10 +13,12 @@ uses crt;
 ///Вместо запятой, ставится + для объединения переменных
 ///Пример: wrc(a+b+'test'+1, 10);
 procedure wrc(text: object; color: integer := 15);
+procedure wrc(text: object; color: string);
 ///Это тот же writeln только возможно выбрать цвет(только цифрой)
 ///Вместо запятой, ставится + для объединения переменных
 ///Пример: wrcl(a+b+'test'+1, 10);
 procedure wrcl(text: object; color: integer := 15);
+procedure wrcl(text: object; color: string);
 ///Укороченный write
 ///Вместо запятой, ставится + для объединения переменных
 ///Пример: wr(a+b+'test'+1);
@@ -35,6 +37,7 @@ procedure ccon;
 procedure ceol;
 ///Цвет текста
 procedure concol(c: integer);
+procedure concol(c: string);
 ///Цвет фона
 procedure backcol(c: integer);
 ///Задержка
@@ -290,6 +293,24 @@ begin
   ConCol(white);
 end;
 
+procedure wrc(text: object; color: string);
+begin
+  ConCol(color);
+  
+  write(text);
+  
+  ConCol(white);
+end;
+
+procedure wrcl(text: object; color: string);
+begin
+  ConCol(color);
+  
+  writeln(text);
+  
+  ConCol(white);
+end;
+
 procedure ccon;
 begin
   clrscr;
@@ -301,8 +322,9 @@ begin
 end;
 
 procedure wait;
+var a: string;
 begin
-  read();
+  read(a);
 end;
 
 procedure wincol(back: integer; text: integer);
@@ -316,6 +338,33 @@ end;
 procedure backcol(c: integer);
 begin
   TextBackground(c);
+end;
+
+procedure concol(c: string);
+var color: integer;
+begin
+  case c of
+    'Black': color := 0;
+    'Blue': color := 1;
+    'Green': color := 2;
+    'Cyan': color := 3;
+    'Red': color := 4;
+    'Magenta': color := 5;
+    'Brown': color := 6;
+    'LightGray': color := 7;
+    'DarkGray': color := 8;
+    'LightBlue': color := 9;
+    'LightGreen': color := 10;
+    'LightCyan': color := 11;
+    'LightRed': color := 12;
+    'LightMagenta': color := 13;
+    'Yellow': color := 14;
+    'White': color := 15;
+  else
+    color := 15;
+  end;
+
+  TextColor(color);
 end;
 
 procedure concol(c: integer);
@@ -342,7 +391,7 @@ begin
   while QRED <> 3 do
   begin
     QRED := QRED + 1;
-    dly(500);
+    dly(0);
     wrc('.', 15);
   end;
   ceol;
